@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Installation Machine Virtuelle</title>
+    
+        <!-- Lien vers la feuille de style Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    
+        <!-- Pré-connexion aux serveurs Google Fonts pour améliorer le temps de chargement -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <!-- Importation de la police Montserrat -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+        <!-- Lien vers la feuille de style css -->
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Questions à traiter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manip.html">Manipulations</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="web.html">Developpement web</a>
+                    </li>
+                   
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <section>
+            <h2>Question 1</h2>
+            <article>
+                <p>La virtualisation est une technologie qui permet de représenter virtuellement des serveurs de stockage, de réseaux et d'autres machines physiques. Le logiciel imite les fonctions d’un matériel physique pour simuler une ou plusieurs machines virtuelles sur une machine physique. Cela peut être utile pour exécuter des fichiers de source inconnue sans craindre de virus.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Question 2</h2>
+            <article>
+                <p>Un émulateur recrée un environnement informatique connu, permettant à un système ou à un logiciel conçu pour une machine spécifique de fonctionner sur une autre. Par exemple, les émulateurs de consoles permettent de jouer à des jeux conçus pour une console sur un ordinateur.</p>
+                <p>Un simulateur imite un environnement en se basant sur des observations. Par exemple, un simulateur iOS permet de tester des applications iPhone sans le système réel. Dans d’autres cas, un simulateur peut modéliser des phénomènes physiques ou astronomiques, comme le comportement d’un trou noir.</p>
+                <p>Une machine virtuelle crée un environnement indépendant basé sur les ressources de la machine qui l’héberge, fonctionnant comme un système complet avec son propre système d’exploitation.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Question 3</h2>
+            <article>
+                <p>Il existe plusieurs types de virtualisation :</p>
+                <ul>
+                    <li>Virtualisation complète</li>
+                    <li>Virtualisation assistée par le matériel</li>
+                    <li>Paravirtualisation</li>
+                    <li>Virtualisation au niveau du système d’exploitation</li>
+                    <li>Virtualisation réseau/stockage</li>
+                    <li>Virtualisation distribuée</li>
+                </ul>
+            </article>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Type de Virtualisation</th>
+                            <th>VirtualBox</th>
+                            <th>VMware Workstation</th>
+                            <th>Stratus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Virtualisation pleine</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Partiellement</td>
+                        </tr>
+                        <tr>
+                            <td>Virtualisation assistée par le matériel</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Paravirtualisation</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Virtualisation au niveau du système d’exploitation</td>
+                            <td>Non</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Virtualisation réseau/stockage</td>
+                            <td>Basique</td>
+                            <td>Basique</td>
+                            <td>Avancée</td>
+                        </tr>
+                        <tr>
+                            <td>Virtualisation distribuée</td>
+                            <td>Non</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Question 5</h2>
+            <article>
+                <p>Pour créer notre machine virtuelle, nous avons utilisé Oracle VirtualBox avec comme machine virtuelle "VmDebian". Nous avons choisi ces outils car ils sont adaptés, populaires et recommandés.</p>
+                <p>Les paramètres choisis :</p>
+                <ul>
+                    <li>RAM : 2 Go</li>
+                    <li>Processeurs : 2</li>
+                    <li>Disque dur : 20 Go</li>
+                </ul>
+            </article>
+            <figure class="text-center">
+                <img src="assets/image/Capture d'écran 2025-01-01 153053.png" class="img-fluid rounded" alt="Illustration Machine Virtuelle">
+
+                <img src="assets/image/Capture d'écran 2025-01-01 153022.png" class="img-fluid rounded" alt="Illustration Machine Virtuelle">
+                <figcaption class="mt-2">Paramètres de la machine virtuelle.</figcaption>
+            </figure>
+        </section>
+    </div>
+
+    <footer class="bg-light text-center py-3">
+        <p>S1.03</p>
+        <p>Par</p>
+        <p>Nicolas Chanez - Florian Puliero - Romann Greco - Basile Clément</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
