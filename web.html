@@ -14,20 +14,20 @@
         <!-- Importation de la police Montserrat -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     
-        <!-- Lien vers la feuille de style css -->
+        <!-- Lien vers la feuille de style CSS -->
         <link rel="stylesheet" href="assets/style.css">
     </head>
 <body>
          <!-- 
             Le corps d'une page contient :
             - Une barre de navigation avec des liens vers différentes sections du site : Accueil, Questions à traiter, Manipulations, Développement web.
-            - Une section contenant d'autres elements afin de les rassembler dans un seul bloc
-            - Des images,articles,titres,figures et tableaux dont le style est defini par le bootstrap
+            - Une section contenant d'autres éléments afin de les rassembler dans un seul bloc
+            - Des images, articles, titres, figures et tableaux dont le style est défini par le Bootstrap
             - Un pied de page avec des informations sur les membres de notre groupe.
         -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Developpement web</a>
+            <a class="navbar-brand" href="#">Développement web</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,65 +42,56 @@
                     <li class="nav-item">
                         <a class="nav-link" href="manip.html">Manipulations</a>
                     </li>
-                  
-                   
-                    
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container mt-4">
         <section class="p-4">
-            <h2 class="mb-4">Developpement du site internet</h2>
+            <h2 class="mb-4">Développement du site internet</h2>
 
-            
             <article class="mb-4">
-              
                 <p>Nous avons choisi d'opter pour un style minimaliste car
-                    le bootstrap s'y prête parfaitement avec un style épuré.
+                    le Bootstrap s'y prête parfaitement avec un style épuré.
                 </p>
                 <p>
-                    Nous y avons ajoutés la police Montserrat choisie depuis
-                     google fonts et qui colle parfaitement avec ce style. 
-                     pour imorter une police nous avons copié le fragment suivant de head 
-                     depuis google font:
+                    Nous y avons ajouté la police Montserrat choisie depuis
+                    Google Fonts et qui colle parfaitement avec ce style. 
+                    Pour importer une police, nous avons copié le fragment suivant dans la section <code>&lt;head&gt;</code> :
                 </p>
                 <code>
                     &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;<br>
                     &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;<br>
                     &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"&gt;
-                     
                 </code>
                 <p>
-                   Voici le lien vers le github contenant l'entiereté du code 
-                   avec des commentaires sur les parties les plus techniques:
+                    Voici le lien vers le GitHub contenant l'intégralité du code 
+                    avec des commentaires sur les parties les plus techniques :
                 </p>
-                <a href="https://github.com/BasileADM/sae-s1-03">Mon Github</a>
+                <a href="https://github.com/BasileADM/sae-s1-03">Mon GitHub</a>
             </article>
 
-         
-          
         </section> 
         <section>
-            <h2>Instalation de Apache</h2>
+            <h2>Installation de Apache</h2>
             <article>
                 <p>
-                    N'utilisant pas webstorm mais visual studio code, nous 
-                    avons été obligés de deployer le site manuelement,
-                     nous nous sommes donc renseignés sur comment le faire.
+                    N'utilisant pas WebStorm mais Visual Studio Code, nous 
+                    avons été obligés de déployer le site manuellement,
+                    nous nous sommes donc renseignés sur la procédure à suivre.
                 </p>
                 <p> 
-                    Pour commencer nous avons installés apache sur notre 
-                    machine virtuels grace aux commandes:
+                    Pour commencer, nous avons installé Apache sur notre 
+                    machine virtuelle grâce aux commandes :
                     <br>
                     <code>
-                        sudo apt update
+                        sudo apt update<br>
                         sudo apt install apache2 -y
                     </code>
                 </p>
                 <p> 
-                   Puis nous avons démaré apache et l'avons paramétré
-                    pour qu'il demarre automatiquement au demarage du systeme:
+                   Puis, nous avons démarré Apache et l'avons paramétré
+                    pour qu'il démarre automatiquement au démarrage du système :
                     <br>
                     <code>
                         sudo systemctl start apache2<br>
@@ -111,13 +102,13 @@
             <h2>Configuration</h2>
             <article>
                 <p> 
-                    Nous avons  créés un fichier de configuration pour notre site
-                    avec la commande suivante:
+                    Nous avons créé un fichier de configuration pour notre site
+                    avec la commande suivante :
                     <br>
                     <code>
                         sudo nano /etc/apache2/sites-available/sae.conf
                     </code><br>
-                    Dans laquelle nous avons insérés le contenu suivant:
+                    Dans lequel nous avons inséré le contenu suivant :
                     <br>
                     <code>
                         &lt;VirtualHost *:80&gt;<br>
@@ -128,36 +119,38 @@
                         CustomLog ${APACHE_LOG_DIR}/sae_access.log combined<br>
                         &lt;/VirtualHost&gt;
                     </code><br>
-                    Ce fichier defini le port du site, le nom du site,son alias,
-                    l'emplacement de ses fichiers et les logs d'erreur et d'acces. 
+                    Ce fichier définit le port du site, le nom du site, son alias,
+                    l'emplacement de ses fichiers et les logs d'erreur et d'accès.
                 </p>
                 <p> 
-                  Puis nous allons dermarer l'hote virtuel de notre site 
-                  et recharger apache avec les commandes suivantes<br>
+                  Ensuite, nous avons démarré l'hôte virtuel de notre site 
+                  et rechargé Apache avec les commandes suivantes :
+                  <br>
                     <code>
                         sudo a2ensite sae.conf<br>
                         sudo systemctl reload apache2
                     </code>
                 </p>
                 <p> 
-                  Nous allons maintenant creer le dossier de notre site avec la commandes<br>
+                  Nous avons créé le dossier de notre site avec la commande suivante :
+                  <br>
                     <code>
                         sudo mkdir -p /var/www/sae
                     </code>
                 </p>
                 <p> 
-                    Nous allons maintenant modifier le propriétaire et le groupe du repertoire
-                    pour s'assurer qu'apache(fonctionnant sous l'utilisateur www-data)
-                     ait les permissions nécessaires pour lire les fichiers de
-                     notre site et éventuellement écrire ou modifier des fichiers
-                     <br>
-                      <code>
+                    Nous avons ensuite modifié le propriétaire et le groupe du répertoire
+                    pour nous assurer qu'Apache (fonctionnant sous l'utilisateur www-data)
+                    dispose des permissions nécessaires pour lire les fichiers de
+                    notre site et éventuellement écrire ou modifier ces fichiers.
+                    <br>
+                    <code>
                         sudo chown -R www-data:www-data /var/www/sae
-                      </code>
+                    </code>
                 </p>
                 <p> 
                    Nous pouvons maintenant placer les fichiers de notre site dans le 
-                   repertoire /var/www/sae avec les commandes:
+                   répertoire /var/www/sae avec les commandes suivantes :
                    <br>
                    <code>
                     sudo rmdir /var/www/sae<br>
@@ -165,26 +158,22 @@
                    </code>
                 </p>
                 <p> 
-                   Nous autorisons maintenant les conexion entrante sur le port 80 avec
-                   la commande suivante
+                   Nous autorisons maintenant les connexions entrantes sur le port 80 avec
+                   la commande suivante :
                    <br>
                       <code>
                         sudo ufw allow 80/tcp
                      </code>
                      <br>
-                     puis dans notre moteur de recherche nous entrons l'URL:
+                     Puis, dans notre moteur de recherche, nous entrons l'URL :
                      <br>
                      <code>
                         http://127.0.0.1/
                      </code>
                 </p>
-
-                    
-
             </article>
         </section>
 
-      
     </div>
     <footer class="bg-light text-center py-3">
         <p>S1.03</p>
